@@ -80,6 +80,8 @@
     <Compile Include="Repository\Interface\IColorRepository.cs" />
     <Compile Include="Repository\Interface\IScoreRepository.cs" />
     <Compile Include="Repository\ScoreRepository.cs" />
+    <Compile Include="Service\GameService.cs" />
+    <Compile Include="Service\Interface\IGameService.cs" />
     <Compile Include="ViewModel\GameButtonViewModel.cs" />
     <Compile Include="ViewModel\GameZoneViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
@@ -146,5 +148,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

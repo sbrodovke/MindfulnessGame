@@ -3,6 +3,8 @@ using GalaSoft.MvvmLight.Ioc;
 using GalaSoft.MvvmLight.Threading;
 using MindfulnessGame.Repository;
 using MindfulnessGame.Repository.Interface;
+using MindfulnessGame.Service;
+using MindfulnessGame.Service.Interface;
 
 namespace MindfulnessGame.ViewModel
 {
@@ -21,6 +23,7 @@ namespace MindfulnessGame.ViewModel
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
             SimpleIoc.Default.Register<IScoreRepository, ScoreRepository>();
             SimpleIoc.Default.Register<IColorRepository, ColorRepository>();
+            SimpleIoc.Default.Register<IGameService, GameService>();
             SimpleIoc.Default.Register<GameZoneViewModel>();
             SimpleIoc.Default.Register<GameButtonViewModel>();
             SimpleIoc.Default.Register<MenuViewModel>();

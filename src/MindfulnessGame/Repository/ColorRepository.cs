@@ -7,6 +7,8 @@ namespace MindfulnessGame.Repository
 {
     public class ColorRepository : IColorRepository
     {
+        private readonly Random _random;
+
         public readonly List<Brush> ColorCollection = new List<Brush>
         {
             Brushes.Lime,
@@ -20,8 +22,6 @@ namespace MindfulnessGame.Repository
             Brushes.Blue,
             Brushes.Black
         };
-
-        private readonly Random _random;
 
         private int _lastIndex;
 
