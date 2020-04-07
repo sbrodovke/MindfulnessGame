@@ -1,0 +1,8 @@
+/src/.vs/*
+/src/*/bin/*
+/src/*/obj/*
+/src/*/bin/*
+/src/*/obj/*
+/src/.idea/*
+/src/packages/*
+/game/*
