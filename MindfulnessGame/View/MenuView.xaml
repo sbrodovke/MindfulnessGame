@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="MindfulnessGame.View.MenuView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             DataContext="{Binding MenuViewModel, Source={StaticResource Locator}}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0"
+                   Text="{Binding Record}"
+                   Margin="10"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center" />
+        <Button Margin="10"
+                Grid.Row="1"
+                Content="Начать игру"
+                Height="30"
+                Width="130"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Command="{Binding Start}" />
+        <Button Margin="10"
+                Grid.Row="2"
+                Content="Пауза"
+                Height="30"
+                Width="130"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Command="{Binding Pause}" />
+        <Button Margin="10"
+                Grid.Row="3"
+                Content="Завершить игру"
+                Height="30"
+                Width="130"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Command="{Binding End}" />
+    </Grid>
+</UserControl>

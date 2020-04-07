@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="MindfulnessGame.View.GameZoneView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:MindfulnessGame.View"
+             mc:Ignorable="d"
+             DataContext="{Binding GameZoneViewModel, Source={StaticResource Locator}}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="130" />
+            <ColumnDefinition Width="40" />
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+                   Margin="5"
+                   Text="{Binding CurrentScore}"
+                   VerticalAlignment="Center" HorizontalAlignment="Center" />
+
+        <TextBlock Grid.Row="1" Grid.Column="0"
+                   Margin="5"
+                   Text="Необходимый цвет:"
+                   VerticalAlignment="Center" HorizontalAlignment="Center" />
+        <Grid Grid.Row="1" Grid.Column="1"
+              Margin="5 10 15 10"
+              Background="{Binding NeedColor}"
+              VerticalAlignment="Center" HorizontalAlignment="Center"
+              Height="20" Width="20" />
+
+        <TextBlock Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
+                   Margin="5"
+                   Text="{Binding GameStatus}"
+                   VerticalAlignment="Center" HorizontalAlignment="Center" />
+
+        <local:GameButtonView Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
+                              Margin="5"
+                              Height="150" Width="150"
+                              VerticalAlignment="Center"
+                              HorizontalAlignment="Center" />
+    </Grid>
+</UserControl>
