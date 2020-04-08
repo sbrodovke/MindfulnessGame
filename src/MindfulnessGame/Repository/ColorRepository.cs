@@ -11,16 +11,11 @@ namespace MindfulnessGame.Repository
 
         public readonly List<Brush> ColorCollection = new List<Brush>
         {
-            Brushes.Lime,
             Brushes.Green,
             Brushes.Yellow,
-            Brushes.Orange,
             Brushes.Red,
-            Brushes.Pink,
             Brushes.Purple,
-            Brushes.Gray,
             Brushes.Blue,
-            Brushes.Black
         };
 
         private int _lastIndex;
